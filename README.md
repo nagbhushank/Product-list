@@ -5,12 +5,12 @@ This is readme file.
 1. header
     * Logo and Title
     * Home
-    * Product
+    * Recipe
     * Cart
     * Login
 
 2. Body
-    * Cards
+    * Cards/Recipe
 
 3. Footer
     * About Us

@@ -1,1 +1,1 @@
-export const TITLE = "Food Receipe"
+export const TITLE = "Kitchen Recipe";
