@@ -2,11 +2,10 @@
   "name": "product-list",
   "version": "1.0.0",
   "description": " This is products application",
-  
   "scripts": {
     "test": "jest",
-    "start" : "parcel index.html",
-    "build" : "parcel build index.html"
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
   },
   "repository": {
     "type": "git",
@@ -23,6 +22,8 @@
   },
   "dependencies": {
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "react-router": "^6.22.2",
+    "react-router-dom": "^6.22.2"
   }
 }
