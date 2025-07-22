@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import RecipeCard from "./RecipeCard";
 
 const Body = () => {
     const [recipes, setRecipes] = useState([]);
@@ -16,35 +17,7 @@ const Body = () => {
 
     return (
         <div className="body">
-            {recipes.map((recipe) => {
-                const {
-                    caloriesPerServing,
-                    cuisine,
-                    id,
-                    image,
-                    name,
-                    instructions,
-                    tags,
-                } = recipe;
-                return (
-                    <div key={id} className="recipe-card">
-                        <div>
-                            <img
-                                src={image}
-                                alt={name}
-                                className="recipe-image"
-                            />
-                            <button className="seemore-btn"> See More</button>
-                        </div>
-                        <div>
-                            <p className="recipe-name"> {name} </p>
-                            <h3> {cuisine}</h3>
-                            <h4>Calories Per Serving : {caloriesPerServing}</h4>
-                            <h5>{tags}</h5>
-                        </div>
-                    </div>
-                );
-            })}
+            <RecipeCard recipes={recipes} data={"OKAY"} />
         </div>
     );
 };
