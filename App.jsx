@@ -1,5 +1,4 @@
 import ReactDom from "react-dom/client";
-import { BrowserRouter } from "react-router-dom";
 import MainContainer from "./src/components/MainContainer.jsx";
 import "./styles.css";
 const App = () => {

@@ -2,7 +2,6 @@ import LogoComponent from "./LogoComponent";
 import { NavLink } from "react-router-dom";
 import { TITLE } from "../utils/Constants";
 import NavigationComponent from "./NavigationComponent";
-import { Link } from "react-router-dom";
 const Header = () => {
     return (
         <div className="header">
