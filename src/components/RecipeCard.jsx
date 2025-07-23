@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router";
+import RecipeDetails from "./RecipeDetails";
 
 const RecipeCard = (props) => {
     const { recipes, data } = props;
@@ -8,7 +9,10 @@ const RecipeCard = (props) => {
     const handleOnClick = (id) => {
         console.log("CLickeddddd" + id);
         // navigate("/recipe/" + id);
+        navigate(<RecipeDetails number={id} />);
         navigate(`/recipe/${id}`);
+        // navigate(<RecipeDetails number={id} />);
+        // <RecipeDetails id={id} />;
     };
 
     return (
@@ -44,7 +48,7 @@ const RecipeCard = (props) => {
                             <h3> {cuisine}</h3>
                             <h4>Calories Per Serving : {caloriesPerServing}</h4>
                             <h5>{tags}</h5>
-                            <p>{data}</p>
+                            {/* <p>{data}</p> */}
                         </div>
                     </div>
                 );
