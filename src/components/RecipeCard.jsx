@@ -26,12 +26,11 @@ const RecipeCard = (props) => {
                                 onClick={() => handleOnClick(id)}
                                 className="seemore-btn"
                             >
-                                {" "}
                                 See More
                             </button>
                         </div>
                         <div>
-                            <p className="recipe-name"> {name} </p>
+                            <h2 className="recipe-name"> {name} </h2>
                             <h3> {cuisine}</h3>
                             <h4>Calories Per Serving : {caloriesPerServing}</h4>
                             <h5>{tags}</h5>

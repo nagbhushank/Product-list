@@ -33,10 +33,8 @@ const appRouter = createBrowserRouter([
 
 const MainContainer = () => {
     return (
-        <div className="main-container">
-            <div>
-                <RouterProvider router={appRouter} />
-            </div>
+        <div>
+            <RouterProvider router={appRouter} />
         </div>
     );
 };
