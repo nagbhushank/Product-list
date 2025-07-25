@@ -34,7 +34,7 @@ const RecipeCard = (props) => {
                             <h3> {cuisine}</h3>
                             <h4>Calories Per Serving : {caloriesPerServing}</h4>
                             <h5>{tags}</h5>
-                            {/* <p>{data}</p> */}
+                            <p>Rs. 69/-</p>
                         </div>
                     </div>
                 );

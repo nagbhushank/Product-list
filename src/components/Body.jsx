@@ -21,7 +21,7 @@ const Body = () => {
 
     console.log("render");
     return (
-        <div className="body">
+        <div>
             {/* {recipes.length > 0 ? (
                 <div>
                     <RecipeCard recipes={recipes} data={"OKAY"} />
