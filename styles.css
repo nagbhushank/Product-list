@@ -1,8 +1,8 @@
 body {
-    background-color: rgb(252, 248, 242);
+    background-color: rgb(243, 240, 240);
 }
 .main-content {
-    margin-left: 15%;
+    margin-left: 10%;
 }
 
 /*Header file*/
@@ -16,7 +16,7 @@ body {
     z-index: 1000;
     flex-direction: column;
     height: 100%;
-    width: 15%;
+    width: 10%;
     border: 1px solid rgb(0, 0, 0);
 }
 
@@ -34,9 +34,8 @@ body {
 
 .title-wrapper {
     text-decoration: none;
-    font-size: x-large;
     color: aliceblue;
-    padding-top: 40px;
+    padding-top: 15%;
     font-weight: bolder;
 }
 
@@ -51,12 +50,11 @@ body {
 .nav-link {
     text-decoration: none;
     margin: 10px;
-    font-size: x-large;
+    font-size: 120%;
 }
 
 .nav-link:hover {
-    /* color: rgb(2, 9, 15); */
-    /* background-color: aliceblue; */
+    color: rgb(2, 9, 15);
     transition-delay: 0.1s;
     transition: 0.5s;
 }
@@ -64,9 +62,10 @@ body {
 /*LogoContainer file*/
 
 .logo {
-    width: 100px;
+    /* margin-top: 1rem; */
+    width: 80%;
     border-radius: 20px;
-    padding: 15px;
+    padding: 1rem;
 }
 
 /*Body file*/
@@ -144,31 +143,53 @@ body {
 }
 
 .recipe-card {
+    text-decoration: none;
+    color: black;
     display: flex;
     padding: 10px;
-    width: 23rem;
+    width: 24rem;
     background-color: hsl(320, 100%, 98%);
-    box-shadow: 20px 8px 16px rgba(0, 0, 0, 0.3);
-    margin: 0.3%;
+    box-shadow: 10px 4px 8px rgba(0, 0, 0, 0.3);
+    margin: 0.2%;
     transition-delay: 0.1s;
     border-radius: 4px;
     transition: 0.5s;
+    background: linear-gradient(100deg, #f0f0f0 30%, #e0e0e0 40%, #f0f0f0 60%);
+    background-size: 400% 100%;
+    animation: card 1.5s linear;
 }
 
 .recipe-card:hover {
     transition-delay: 0.1s;
-    transform: scale(1.03);
+    /* transform: scale(1.03); */
+    background-color: antiquewhite;
     transition: 0.5s;
+    background: linear-gradient(100deg, #f0f0f0 30%, #e0e0e0 40%, #f0f0f0 60%);
+    background-size: 400% 100%;
+    animation: card 1s infinite linear;
 }
 
-/* .recipe-name {
-    font-size: x-large;
-    font-weight: bolder;
-} */
+@keyframes card {
+    0% {
+        background-position: 400px 0;
+    }
 
-/* */
+    100% {
+        background-position: -400px 0;
+    }
+}
 
-/*Footer file*/
+/* Error Page */
+.error-page-wrapper {
+    border: 1px solid black;
+    text-align: center;
+    margin: 10% 0% 28% 35%;
+    /* padding: 5rem; */
+    width: 24rem;
+    padding-bottom: 2%;
+}
+
+/* Footer file */
 .footer {
     border: 1px solid chocolate;
 }
