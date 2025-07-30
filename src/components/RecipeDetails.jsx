@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react";
+import { useParams } from "react-router";
+import { SEARCH_RECIPE_DETAILS_API } from "../utils/Constants";
 
 const RecipeDetails = (props) => {
+    const { id } = useParams();
     const [recipeDetails, setRecipeDetails] = useState({});
 
     useEffect(() => {
@@ -10,9 +13,8 @@ const RecipeDetails = (props) => {
     }, []);
 
     const getRecipeDetails = async () => {
-        const response = await fetch(`https://dummyjson.com/recipes/1`);
+        const response = await fetch(SEARCH_RECIPE_DETAILS_API + id);
         const getData = await response.json();
-        console.log(getData);
         setRecipeDetails(getData);
     };
 

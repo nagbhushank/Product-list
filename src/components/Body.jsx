@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import RecipeCard from "./RecipeCard";
 import Shimmer from "./Shimmer";
+import { GET_ALL_RECIPE_DATA } from "../utils/Constants";
 
 const Body = () => {
     const [recipes, setRecipes] = useState([]);
@@ -12,9 +13,8 @@ const Body = () => {
 
     const getRecipes = async () => {
         setLoading(false);
-        const data = await fetch("https://dummyjson.com/recipes");
+        const data = await fetch(GET_ALL_RECIPE_DATA);
         const response = await data.json();
-        console.log(response.recipes);
         setRecipes(response.recipes);
         setLoading(true);
     };
@@ -22,18 +22,12 @@ const Body = () => {
     console.log("render");
     return (
         <div className="body">
-            {/* {recipes.length > 0 ? (
-                <div>
-                    <RecipeCard recipes={recipes} data={"OKAY"} />
-                </div>
-            ) : (
-                <div>
-                    <Shimmer />
-                </div>
-            )} */}
-
             {loading ? (
-                <RecipeCard recipes={recipes} data={"OKAY"} />
+                <div className="recipe-wrapper">
+                    {recipes.map((recipe) => {
+                        return <RecipeCard recipe={recipe} key={recipe.id} />;
+                    })}
+                </div>
             ) : (
                 <Shimmer />
             )}

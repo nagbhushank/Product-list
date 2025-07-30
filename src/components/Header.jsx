@@ -5,7 +5,7 @@ import NavigationComponent from "./NavigationComponent";
 const Header = () => {
     return (
         <div className="header">
-            <NavLink to="/">
+            <NavLink to="/" className="nav-link">
                 <div className="logo-container">
                     <LogoComponent />
                     <div className="title-wrapper">{TITLE}</div>
