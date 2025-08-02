@@ -1,22 +1,13 @@
-import { useState, useEffect } from "react";
 import { useParams } from "react-router";
-import { SEARCH_RECIPE_DETAILS_API } from "../utils/Constants";
+import useRecipeDetails from "../utils/useRecipeDetails";
+import Shimmer from "./Shimmer";
 
 const RecipeDetails = (props) => {
     const { id } = useParams();
-    const [recipeDetails, setRecipeDetails] = useState({});
 
-    useEffect(() => {
-        const { number } = props;
-        console.log(number);
-        getRecipeDetails(number);
-    }, []);
+    const recipeDetails = useRecipeDetails(id);
 
-    const getRecipeDetails = async () => {
-        const response = await fetch(SEARCH_RECIPE_DETAILS_API + id);
-        const getData = await response.json();
-        setRecipeDetails(getData);
-    };
+    if (recipeDetails.length === 0) <Shimmer />;
 
     return (
         <div>

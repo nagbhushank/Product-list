@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import RecipeCard from "./RecipeCard";
 import Shimmer from "./Shimmer";
+import RecipeCardHOC from "./RecipeCardHOC";
+
 import { GET_ALL_RECIPE_DATA } from "../utils/Constants";
 
 const Body = () => {
@@ -12,24 +14,41 @@ const Body = () => {
     }, []);
 
     const getRecipes = async () => {
-        setLoading(false);
+        setLoading(true);
         const data = await fetch(GET_ALL_RECIPE_DATA);
         const response = await data.json();
         setRecipes(response.recipes);
-        setLoading(true);
+        setLoading(false);
     };
+
+    const LabelRecipeCard = RecipeCardHOC(RecipeCard);
 
     console.log("render");
     return (
         <div className="body">
             {loading ? (
+                <Shimmer />
+            ) : (
                 <div className="recipe-wrapper">
                     {recipes.map((recipe) => {
-                        return <RecipeCard recipe={recipe} key={recipe.id} />;
+                        console.log(recipe);
+                        return (
+                            <div className="recipe-card" key={recipe.id}>
+                                {recipe.caloriesPerServing < 200 ? (
+                                    <LabelRecipeCard
+                                        recipe={recipe}
+                                        key={recipe.id}
+                                    />
+                                ) : (
+                                    <RecipeCard
+                                        recipe={recipe}
+                                        key={recipe.id}
+                                    />
+                                )}
+                            </div>
+                        );
                     })}
                 </div>
-            ) : (
-                <Shimmer />
             )}
         </div>
     );
