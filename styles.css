@@ -2,7 +2,7 @@ body {
     background-color: rgb(243, 240, 240);
 }
 .main-content {
-    margin-left: 10%;
+    margin-left: 13%;
 }
 
 /*Header file*/
@@ -13,10 +13,9 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1000;
     flex-direction: column;
     height: 100%;
-    width: 10%;
+    width: 13%;
     border: 1px solid rgb(0, 0, 0);
 }
 
@@ -128,7 +127,7 @@ body {
 .recipe-card {
     position: relative;
     display: flex;
-    width: 22rem;
+    width: 18rem;
     background-color: hsl(320, 100%, 98%);
     box-shadow: 10px 4px 8px rgba(0, 0, 0, 0.3);
     margin: 0.8%;
