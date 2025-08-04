@@ -84,10 +84,10 @@ body {
 }
 
 .recipe-card-shimmer {
-    width: 250px;
-    height: 470px;
+    width: 18rem;
+    height: 25rem;
     background: linear-gradient(100deg, #f0f0f0 30%, #e0e0e0 40%, #f0f0f0 60%);
-    background-size: 400% 100%;
+    /* background-size: 400% 100%; */
     animation: shimmer 1.5s infinite linear;
     display: flex;
     flex-direction: column;
@@ -183,15 +183,14 @@ body {
     animation: card 1.5s linear;
 }
 
-.recipe-details-image{
+.recipe-details-image {
     height: 30em;
     width: 30em;
 }
 
-.instructions-wrapper{
-margin-left: 2rem;
+.instructions-wrapper {
+    margin-left: 2rem;
 }
-
 
 /* RecipeCardHoc */
 
@@ -201,10 +200,10 @@ margin-left: 2rem;
     width: 30px;
     right: 0;
     /* z-index: 5; */
-    background-color: rgb(18, 157, 6);
+    background-color: rgb(96, 230, 62);
     color: white;
     border-top-right-radius: 5px;
-    font-size:20px;
+    font-size: 20px;
     text-align: center;
 }
 

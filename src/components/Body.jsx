@@ -1,55 +1,40 @@
-import { useState, useEffect } from "react";
 import RecipeCard from "./RecipeCard";
 import Shimmer from "./Shimmer";
 import RecipeCardHOC from "./RecipeCardHOC";
-
-import { GET_ALL_RECIPE_DATA } from "../utils/Constants";
+import useGetAllRecipeData from "../utils/useGetAllRecipeData";
+import { useEffect, useState } from "react";
 
 const Body = () => {
-    const [recipes, setRecipes] = useState([]);
-    const [loading, setLoading] = useState(false);
+    const [allRecipes, setAllRecipes] = useState([]);
+    const data = useGetAllRecipeData();
 
     useEffect(() => {
-        getRecipes();
-    }, []);
+        if (data) setAllRecipes(data);
+    }, [data]);
 
-    const getRecipes = async () => {
-        setLoading(true);
-        const data = await fetch(GET_ALL_RECIPE_DATA);
-        const response = await data.json();
-        setRecipes(response.recipes);
-        setLoading(false);
-    };
+    if (!data) return <Shimmer />;
 
     const LabelRecipeCard = RecipeCardHOC(RecipeCard);
 
     console.log("render");
     return (
         <div className="body">
-            {loading ? (
-                <Shimmer />
-            ) : (
-                <div className="recipe-wrapper">
-                    {recipes.map((recipe) => {
-                        console.log(recipe);
-                        return (
-                            <div className="recipe-card" key={recipe.id}>
-                                {recipe.caloriesPerServing < 200 ? (
-                                    <LabelRecipeCard
-                                        recipe={recipe}
-                                        key={recipe.id}
-                                    />
-                                ) : (
-                                    <RecipeCard
-                                        recipe={recipe}
-                                        key={recipe.id}
-                                    />
-                                )}
-                            </div>
-                        );
-                    })}
-                </div>
-            )}
+            <div className="recipe-wrapper">
+                {allRecipes.map((recipe) => {
+                    return (
+                        <div className="recipe-card" key={recipe.id}>
+                            {recipe.caloriesPerServing < 300 ? (
+                                <LabelRecipeCard
+                                    recipe={recipe}
+                                    key={recipe.id}
+                                />
+                            ) : (
+                                <RecipeCard recipe={recipe} key={recipe.id} />
+                            )}
+                        </div>
+                    );
+                })}
+            </div>
         </div>
     );
 };

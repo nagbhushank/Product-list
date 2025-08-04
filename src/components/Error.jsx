@@ -1,6 +1,5 @@
-import { useNavigate } from "react-router";
+import { AiOutlineHome } from "react-icons/ai";
 import { NavLink } from "react-router-dom";
-import React from "react";
 const Error = () => {
     return (
         <div>
@@ -9,7 +8,8 @@ const Error = () => {
                 <p>The page you are looking for does not exist.</p>
                 <div className="error-underline"></div>
                 <NavLink className="nav-link" path="/home">
-                    Home
+                    Goto &nbsp;
+                    <AiOutlineHome />
                 </NavLink>
             </div>
         </div>
