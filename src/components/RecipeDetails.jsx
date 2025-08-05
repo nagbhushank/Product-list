@@ -23,8 +23,20 @@ const RecipeDetails = (props) => {
                     alt={recipeDetails.name}
                     className="recipe-details-image"
                 />
+                <>
+                    <h3>Instructions :</h3>
+                    {recipeDetails.instructions?.length > 0 ? (
+                        recipeDetails.instructions.map((step, index) => (
+                            <div key={index}>
+                                {index + 1}. {step}
+                            </div>
+                        ))
+                    ) : (
+                        <p>No instructions available.</p>
+                    )}
+                </>
             </div>
-            <div className="instructions-wrapper">
+            <div>
                 <h2> {recipeDetails.name}</h2>
                 <h3>Calories : {recipeDetails.caloriesPerServing}</h3>
                 <h3>
@@ -37,15 +49,22 @@ const RecipeDetails = (props) => {
                     <SiLevelsdotfyi />:{recipeDetails.difficulty}
                 </h3>
                 <h3>
-                    <AiOutlineTags /> : {recipeDetails.tags}
+                    <AiOutlineTags /> :{" "}
+                    {recipeDetails.tags?.length > 0 ? (
+                        recipeDetails.tags.map((step, index) => (
+                            <span key={index}>{step}, </span>
+                        ))
+                    ) : (
+                        <p>No TAGS.</p>
+                    )}
                 </h3>
                 <h3>
                     <FcRatings />: {recipeDetails.rating}
                 </h3>
-                <div className="instructions-wrapper">
+                <div>
                     <h3>Instructions :</h3>
-                    {recipeDetails.instructions?.length > 0 ? (
-                        recipeDetails.instructions.map((step, index) => (
+                    {recipeDetails.ingredients?.length > 0 ? (
+                        recipeDetails.ingredients.map((step, index) => (
                             <div key={index}>
                                 {index + 1}. {step}
                             </div>

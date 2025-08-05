@@ -131,32 +131,15 @@ body {
     background-color: hsl(320, 100%, 98%);
     box-shadow: 10px 4px 8px rgba(0, 0, 0, 0.3);
     margin: 0.8%;
-    transition-delay: 0.1s;
     border-radius: 5px;
     transition: 0.5s;
-    background: linear-gradient(100deg, #f0f0f0 30%, #e0e0e0 40%, #f0f0f0 60%);
     background-size: 400% 100%;
-    animation: card 1.5s linear;
 }
 
 .recipe-card:hover {
-    transition-delay: 0.1s;
-    /* transform: scale(1.03); */
-    background-color: antiquewhite;
+    background-color: rgb(236, 226, 210);
+    transform: scale(1.03);
     transition: 0.5s;
-    background: linear-gradient(100deg, #f0f0f0 30%, #e0e0e0 40%, #f0f0f0 60%);
-    background-size: 400% 100%;
-    animation: card 1s infinite linear;
-}
-
-@keyframes card {
-    0% {
-        background-position: 400px 0;
-    }
-
-    100% {
-        background-position: -400px 0;
-    }
 }
 
 /* Error Page */
@@ -171,21 +154,29 @@ body {
 
 /* RecipeDetails */
 .recipe-details-card {
-    display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    background-color: #f4e0d0;
+    background-size: 400% 100%;
+    border-radius: 5px;
     width: 70%;
-    background-color: hsl(34, 70%, 69%);
-    box-shadow: 10px 4px 8px rgba(0, 0, 0, 0.3);
     margin: 6%;
     padding: 1%;
-    border-radius: 5px;
-    background-size: 400% 100%;
-    animation: card 1.5s linear;
+    display: flex;
+    box-shadow: 10px 4px 8px #0000004d;
 }
 
 .recipe-details-image {
-    height: 30em;
-    width: 30em;
+    height: 30rem;
+    width: 30rem;
+    border-radius: 50px;
+    transition: transform 0.4s ease-out; 
+}
+
+.recipe-details-image:hover{
+    cursor: pointer;
+    /* transform: scale(1.05); */
+    transform: translate(10px, 10px) scale(1.02) rotate(0deg);
+    transition: transform 0.4s ease-out;
 }
 
 .instructions-wrapper {
