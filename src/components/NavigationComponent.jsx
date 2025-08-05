@@ -28,7 +28,15 @@ const NavigationComponent = () => {
             {menuObject.map((menu) => {
                 const { label, id, path, icon } = menu;
                 return (
-                    <NavLink key={id} to={path} className="nav-link">
+                    <NavLink
+                        key={id}
+                        to={path}
+                        className="nav-link"
+                        // className="{({ isActive }) => {
+                        //     console.log("Nav", isActive);
+                        //     isActive === true ? "nav-link active" : "nav-link";
+                        // }}""
+                    >
                         {icon} &nbsp;
                         {label}
                     </NavLink>

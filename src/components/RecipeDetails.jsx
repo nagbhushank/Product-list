@@ -62,7 +62,7 @@ const RecipeDetails = (props) => {
                     <FcRatings />: {recipeDetails.rating}
                 </h3>
                 <div>
-                    <h3>Instructions :</h3>
+                    <h3>Ingredients :</h3>
                     {recipeDetails.ingredients?.length > 0 ? (
                         recipeDetails.ingredients.map((step, index) => (
                             <div key={index}>

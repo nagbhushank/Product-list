@@ -1,22 +1,20 @@
 This is readme file.
 
-1. Header
-
-    - Logo and Title
-    - Home
-    - Recipe
-    - Login
-
-2. Body
-
-    - Cards/Recipe
-
-3. Footer
-    - About Us
-    - Contact Us
-
----
-
-Body -
-
-Called Recipe API using useEffect and display data in table format
+Header created
+Body created
+Footer
+getRecipes API called
+Recipe card created
+Routes added
+Recipe details page created
+Shimmer loading added
+Search Component added
+Sidebar position changed
+fix title link tag
+create and show Footer
+Display custom error page
+implement HOC
+RecipeCard converted to NavLink
+create Custom Hooks - useRecipeDetails hook added
+create Custom Hooks - useGetAllRecipeData hook added
+create Custom Hooks - useOnlineStatus hook added

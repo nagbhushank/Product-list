@@ -59,6 +59,13 @@ body {
     transition: 0.5s;
 }
 
+.online {
+    color: green;
+}
+.offline {
+    color: red;
+}
+
 /*LogoContainer file*/
 
 .logo {
@@ -169,10 +176,10 @@ body {
     height: 30rem;
     width: 30rem;
     border-radius: 50px;
-    transition: transform 0.4s ease-out; 
+    transition: transform 0.4s ease-out;
 }
 
-.recipe-details-image:hover{
+.recipe-details-image:hover {
     cursor: pointer;
     /* transform: scale(1.05); */
     transform: translate(10px, 10px) scale(1.02) rotate(0deg);
