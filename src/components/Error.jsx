@@ -1,11 +1,12 @@
 import { AiOutlineHome } from "react-icons/ai";
 import { NavLink } from "react-router-dom";
+import { PNF404, PAGE_NOT_EXISTS } from "../utils/Constants";
 const Error = () => {
     return (
         <div>
             <div className="error-page-wrapper">
-                <h1>404 - Page Not Found</h1>
-                <p>The page you are looking for does not exist.</p>
+                <h1>{PNF404}</h1>
+                <p>{PAGE_NOT_EXISTS}</p>
                 <div className="error-underline"></div>
                 <NavLink className="nav-link" path="/home">
                     Goto &nbsp;
