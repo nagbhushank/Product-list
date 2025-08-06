@@ -19,4 +19,5 @@ create Custom Hooks - useRecipeDetails hook added
 create Custom Hooks - useGetAllRecipeData hook added
 create Custom Hooks - useOnlineStatus hook added
 hardcoded test replaced with constants
-Code Splitting/ Lazy Loading/ Suspense code added in MainContainer.jsx
+CodeSplitting/ Lazy Loading/ Suspense code added in MainContainer.jsx
+dropdown and radio buttoon code added in SearchComponent.jsx
