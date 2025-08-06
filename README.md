@@ -19,3 +19,4 @@ create Custom Hooks - useRecipeDetails hook added
 create Custom Hooks - useGetAllRecipeData hook added
 create Custom Hooks - useOnlineStatus hook added
 hardcoded test replaced with constants
+Code Splitting/ Lazy Loading/ Suspense code added in MainContainer.jsx

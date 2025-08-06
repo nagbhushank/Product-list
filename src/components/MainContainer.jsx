@@ -3,8 +3,12 @@ import Body from "./Body";
 import Footer from "./Footer";
 import Header from "./Header";
 import RecipeDetails from "./RecipeDetails";
-import SearchComponent from "./SearchComponent";
+// import SearchComponent from "./SearchComponent";
 import Error from "./Error";
+import { lazy, Suspense } from "react";
+import Shimmer from "./Shimmer";
+
+const LazySearchComponent = lazy(() => import("./SearchComponent"));
 
 const AppLayout = () => {
     return (
@@ -25,7 +29,16 @@ const appRouter = createBrowserRouter([
         children: [
             { path: "/", element: <Body /> },
             { path: "/recipe/:id", element: <RecipeDetails /> },
-            { path: "/search", element: <SearchComponent /> },
+            // { path: "/search", element: <SearchComponent /> },
+            {
+                path: "/search",
+                element: (
+                    <Suspense fallback={<Shimmer />}>
+                        <LazySearchComponent />
+                    </Suspense>
+                ),
+            },
+
             { path: "/*", element: <Error /> },
         ],
     },
