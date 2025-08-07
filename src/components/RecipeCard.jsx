@@ -1,4 +1,7 @@
 // import { useNavigate } from "react-router";
+import { AiOutlineTags } from "react-icons/ai";
+import { IoFastFoodOutline } from "react-icons/io5";
+import { LuHeartPulse } from "react-icons/lu";
 import { NavLink } from "react-router-dom";
 
 const RecipeCard = (props) => {
@@ -16,9 +19,18 @@ const RecipeCard = (props) => {
             </div>
             <div>
                 <h3> {name} </h3>
-                <h4> {cuisine}</h4>
-                <h5>Calories : {caloriesPerServing}</h5>
-                <h6>Tag : {tags}</h6>
+                <h4>
+                    <IoFastFoodOutline /> : &nbsp;{cuisine}
+                </h4>
+                <h6>
+                    <AiOutlineTags /> : &nbsp;
+                    {tags.map((id, tag) => {
+                        return <span key={tag}>{id}, &nbsp;</span>;
+                    })}
+                </h6>
+                <h5>
+                    <LuHeartPulse /> &nbsp;: {caloriesPerServing}
+                </h5>
             </div>
         </NavLink>
     );
