@@ -21,3 +21,4 @@ create Custom Hooks - useOnlineStatus hook added
 hardcoded test replaced with constants
 CodeSplitting/ Lazy Loading/ Suspense code added in MainContainer.jsx
 dropdown and radio buttoon code added in SearchComponent.jsx
+added css from ChatGPT
