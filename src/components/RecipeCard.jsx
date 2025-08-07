@@ -10,7 +10,7 @@ const RecipeCard = (props) => {
     // };
     const { caloriesPerServing, cuisine, id, image, name, tags } = recipe;
     return (
-        <NavLink key={id} to={`/recipe/${id}`} className="nav-link">
+        <NavLink key={id} to={`/recipe/${id}`} className="card-link">
             <div>
                 <img src={image} alt={name} className="recipe-image" />
             </div>

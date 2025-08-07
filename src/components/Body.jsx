@@ -12,12 +12,10 @@ const Body = () => {
         if (data) setAllRecipes(data);
     }, [data]);
 
-    console.log(data);
     if (!data) return <Shimmer />;
 
     const LabelRecipeCard = RecipeCardHOC(RecipeCard);
 
-    console.log("render");
     return (
         <div className="body">
             <div className="recipe-wrapper">
