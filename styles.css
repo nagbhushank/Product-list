@@ -286,13 +286,13 @@ body {
 .calories-label {
     position: absolute;
     top: 0;
-    width: 30px;
-    right: 0;
-    /* z-index: 5; */
+    width: 20px;
+    left: 0;
+    z-index: 5;
     background-color: rgb(96, 230, 62);
     color: white;
     border-top-right-radius: 5px;
-    font-size: 20px;
+    font-size: 15px;
     text-align: center;
 }
 
