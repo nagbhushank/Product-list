@@ -24,14 +24,14 @@ const NavigationComponent = () => {
     ];
 
     return (
-        <div className="navigation-component">
+        <div className="flex w-[100%] text-center flex-col">
             {menuObject.map((menu) => {
                 const { label, id, path, icon } = menu;
                 return (
                     <NavLink
                         key={id}
                         to={path}
-                        className="nav-link"
+                        className="m-[10px] text-[120%] inline-flex items-center text-[1rem] decoration-none text-[#fff] bg-[#4e75e1] px-[1.2rem] py-[0.6rem] rounded-[5px] transition-colors duration-300 ease-in-out hover:bg-[#0449b1]"
                         // className="{({ isActive }) => {
                         //     console.log("Nav", isActive);
                         //     isActive === true ? "nav-link active" : "nav-link";

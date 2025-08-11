@@ -1,8 +1,17 @@
-body {
-    background-color: rgb(243, 240, 240);
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"); */
+
+@import "tailwindcss";
+
+.roboto-body {
+    font-family: "Roboto", sans-serif;
 }
 
-.nav-link {
+/* body {
+    background-color: rgb(243, 240, 240);
+} */
+
+/* .nav-link {
     margin: 10px;
     font-size: 120%;
     display: inline-flex;
@@ -14,23 +23,23 @@ body {
     padding: 0.6rem 1.2rem;
     border-radius: 5px;
     transition: background-color 0.3s ease;
-}
+} */
 
-.nav-link:hover {
+/* .nav-link:hover {
     transition: 0.5s;
     background-color: #0449b1;
     text-decoration: none;
-}
+} */
 
 /* MainContainer file */
 
-.main-content {
+/* .main-content {
     margin-left: 13%;
-}
+} */
 
 /*Header file*/
 
-.header {
+/* .header {
     background-color: rgb(24, 47, 97);
     justify-content: space-around;
     position: fixed;
@@ -40,65 +49,64 @@ body {
     height: 100%;
     width: 13%;
     border: 1px solid rgb(0, 0, 0);
-}
+} */
 
-.logo-container {
+/* .logo-container {
     display: flex;
-}
+} */
 
-.navigation-container {
+/* .navigation-container {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     align-items: baseline;
     padding-left: 5%;
-}
+} */
 
-.title-wrapper {
+/* .title-wrapper {
     text-decoration: none;
     color: aliceblue;
     padding-top: 15%;
     font-weight: bolder;
-}
+} */
 
 /*Navigation Component file*/
-.navigation-component {
+/* .navigation-component {
     display: flex;
     flex-direction: column;
     width: 100%;
     text-align: center;
-}
+} */
 
-.online {
+/* .online {
     color: green;
 }
 .offline {
     color: red;
-}
+} */
 
 /*LogoContainer file*/
 
-.logo {
-    /* margin-top: 1rem; */
+/* .logo {
     width: 80%;
     border-radius: 20px;
     padding: 1rem;
-}
+} */
 
 /*Body file*/
-.body {
+/* .body {
     display: flex;
     flex-wrap: wrap;
-}
+} */
 
-.recipe-card {
+/* .recipe-card {
     position: relative;
     display: flex;
     width: 18rem;
-    box-shadow: 10px 4px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 10px 4px 8px #0000004d;
     margin: 0.8%;
     border-radius: 20px;
-}
+} */
 
 /*Shimmer file*/
 
@@ -138,14 +146,14 @@ body {
 
 /*Recipe Card file*/
 
-.card-link {
+/* .card-link {
     text-decoration: none;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: background-color 0.3s ease;
     width: 24rem;
 }
 
 .card-link:hover {
-    transform: translateY(-5px);
+    background-color: #c9d1e6;
 }
 
 .recipe-image {
@@ -174,14 +182,14 @@ body {
     font-size: 0.95rem;
     margin-bottom: 0.2rem;
     color: #515050;
-}
-.recipe-wrapper {
+} */
+/* .recipe-wrapper {
     display: flex;
     flex-wrap: wrap;
-}
+} */
 
 /* Error Page */
-.error-page-wrapper {
+/* .error-page-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -212,10 +220,10 @@ body {
     background-color: #4e75e1;
     margin-bottom: 2rem;
     border-radius: 2px;
-}
+} */
 
 /* RecipeDetails */
-.recipe-details-card {
+/* .recipe-details-card {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
@@ -226,10 +234,10 @@ body {
     max-width: 1200px;
     margin: 2rem auto;
     box-sizing: border-box;
-}
+} */
 
 /* Image + Instructions */
-.recipe-details-card > div:first-child {
+/* .recipe-details-card > div:first-child {
     flex: 1 1 350px;
     display: flex;
     flex-direction: column;
@@ -244,21 +252,21 @@ body {
 }
 
 /* Instructions text */
-.recipe-details-card > div:first-child h3 {
+/* .recipe-details-card > div:first-child h3 {
     margin-top: 1rem;
     font-size: 1.2rem;
     color: #333;
-}
+} */
 
 /* Details Section */
-.recipe-details-card > div:last-child {
+/* .recipe-details-card > div:last-child {
     flex: 2 1 500px;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-}
+} */
 
-.recipe-details-card h2 {
+/* .recipe-details-card h2 {
     font-size: 2rem;
     margin-bottom: 0.5rem;
     color: #2b2b2b;
@@ -271,7 +279,7 @@ body {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-}
+}  */
 
 /* Handle responsive */
 @media (max-width: 768px) {
@@ -282,7 +290,7 @@ body {
 }
 
 /* RecipeCardHoc */
-
+/* 
 .calories-label {
     position: absolute;
     top: 0;
@@ -294,9 +302,9 @@ body {
     border-top-right-radius: 5px;
     font-size: 15px;
     text-align: center;
-}
+} */
 
 /* Footer file */
-.footer {
-    border: 1px solid rgb(30, 105, 210);
-}
+/* .footer {
+    border: 1px solid #1e69d2;
+} */
