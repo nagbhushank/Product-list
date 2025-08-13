@@ -2,13 +2,13 @@ import LogoComponent from "./LogoComponent";
 import { NavLink } from "react-router-dom";
 import { TITLE } from "../utils/Constants";
 import NavigationComponent from "./NavigationComponent";
+import { useUserName } from "../context/LoginUserContext";
 import useOnlineStatus from "../utils/useOnlineStatus";
-import { useContext } from "react";
-import UserContext from "../context/userContext";
+
 const Header = () => {
     const userStatus = useOnlineStatus();
 
-    const { username, setUsername } = useContext(UserContext);
+    const { username, updateUserName } = useUserName();
 
     return (
         <div className="bg-[#182f61] justify-arround fixed top-0 left-0 flex-col h-[100%] w-[13%]">

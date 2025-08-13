@@ -22,10 +22,10 @@ const RecipeDetails = (props) => {
                 <img
                     src={recipeDetails.image}
                     alt={recipeDetails.name}
-                    className="w-full h-auto rounded-[8px] object-cover"
+                    className="w-full h-auto rounded-[20px] object-cover"
                 />
                 <>
-                    <h3 className="mt-[1rem] text-[1.2rem] text-[#333]">
+                    <h3 className="mt-[1rem] text-[1.2rem] text-[#333] text-[1.5rem]">
                         Instructions :
                     </h3>
                     {recipeDetails.instructions?.length > 0 ? (
@@ -70,7 +70,7 @@ const RecipeDetails = (props) => {
                     <FcRatings />: {recipeDetails.rating}
                 </h3>
                 <div>
-                    <h3 className="text-[1.2rem] text-[#444] m-[0.2_0rem] flex items-center gap-[0.5rem]">
+                    <h3 className="text-[1.2rem] text-[#444] m-[0.2_0rem] flex items-center gap-[0.5rem] text-[1.5rem]">
                         Ingredients :
                     </h3>
                     {recipeDetails.ingredients?.length > 0 ? (

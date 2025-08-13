@@ -7,17 +7,14 @@ import RecipeDetails from "./RecipeDetails";
 import Error from "./Error";
 import { lazy, Suspense, useContext, useState } from "react";
 import Shimmer from "./Shimmer";
-import UserContext from "../context/userContext";
+import { UserProvider } from "../context/LoginUserContext";
 
 const LazySearchComponent = lazy(() => import("./SearchComponent"));
 
 const AppLayout = () => {
-    const [username, setUsername] = useState("Abhishek");
     return (
         <div>
-            <UserContext.Provider value={{ username, setUsername }}>
-                <Header />
-            </UserContext.Provider>
+            <Header />
             <div className="ml-[13%]">
                 <Outlet />
                 <Footer />
@@ -49,12 +46,11 @@ const appRouter = createBrowserRouter([
 ]);
 
 const MainContainer = () => {
-    const { LoggedInUser } = useContext(UserContext);
     return (
         <div>
-            <UserContext.Provider value={{ LoggedInUser }}>
+            <UserProvider>
                 <RouterProvider router={appRouter} />
-            </UserContext.Provider>
+            </UserProvider>
         </div>
     );
 };

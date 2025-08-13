@@ -1,12 +1,7 @@
-import { useContext } from "react";
-import UserContext from "../context/userContext";
-
 const Footer = () => {
-    const { LoggedInUser } = useContext(UserContext);
-    console.log(LoggedInUser);
     return (
-        <div>
-            <h2 className="bg-[#182f61] text-[white]">{LoggedInUser}</h2>
+        <div className="items-center">
+            <div className="w-[90%] h-[4px] bg-[#4e75e1] m-[7rem] rounded-[1px]"></div>
         </div>
     );
 };
