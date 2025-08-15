@@ -12,10 +12,15 @@ const GET_ALL_RECIPE_DATA = "https://dummyjson.com/recipes/";
 const PNF404 = "404 - Page Not Found";
 const PAGE_NOT_EXISTS = "The page you are looking for does not exist.";
 
+const DARK_THEME = "dark";
+const WHITE_THEME = "white";
+
 export {
     TITLE,
     SEARCH_RECIPE_DETAILS_API,
     GET_ALL_RECIPE_DATA,
     PNF404,
     PAGE_NOT_EXISTS,
+    DARK_THEME,
+    WHITE_THEME,
 };

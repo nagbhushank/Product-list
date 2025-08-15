@@ -8,6 +8,7 @@ import Error from "./Error";
 import { lazy, Suspense, useContext, useState } from "react";
 import Shimmer from "./Shimmer";
 import { UserProvider } from "../context/LoginUserContext";
+import { ThemeProvider } from "../context/ThemeContext";
 
 const LazySearchComponent = lazy(() => import("./SearchComponent"));
 
@@ -48,9 +49,11 @@ const appRouter = createBrowserRouter([
 const MainContainer = () => {
     return (
         <div>
-            <UserProvider>
-                <RouterProvider router={appRouter} />
-            </UserProvider>
+            <ThemeProvider>
+                <UserProvider>
+                    <RouterProvider router={appRouter} />
+                </UserProvider>
+            </ThemeProvider>
         </div>
     );
 };
