@@ -17,7 +17,7 @@ const Header = () => {
     return (
         // <div className="bg-[#182f61] justify-arround fixed top-0 left-0 flex-col h-[100%] w-[13%]">
         <div
-            className={`justify-arround fixed top-0 left-0 flex-col h-[100%] w-[13%] ${
+            className={`flex justify-arround fixed top-0 left-0 flex-col h-[100%] w-[13%] ${
                 theme === DARK_THEME ? "bg-white" : "bg-black"
             }`}
         >
@@ -25,7 +25,7 @@ const Header = () => {
                 to="/"
                 className="m-[10px] text-[120%] inline-flex items-center text-[1rem] decoration-none text-[#fff] bg-[#4e75e1] px-[1.2rem] py-[0.6rem] rounded-[5px] transition-colors duration-300 ease-in-out hover:bg-[#0449b1]"
             >
-                <div className="flex">
+                <div className="flex justify-around">
                     <LogoComponent />
                     <div className="text-none color-[aliceblue] pt-[15%] font-extrabold">
                         {TITLE}
